@@ -9,32 +9,47 @@
 <body>
   <div id="modal" class="modal">
     <div class="modal-content">
-      <h2>Form Inside Modal</h2>
-      <form class="modalForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="editDate">Date:</label>
-        <input type="date" id="editDate" name="date" required />
-
-        <div class="btns">
-          <button type="submit" id="submit">Submit</button>
-          <button type="button" class="cancel">Cancel</button>
-        </div>
-      </form>
+      <div class="modal-header">
+        <h2>Edit Task</h2>
+      </div>
+      <div class="modal-body">
+        <form class="modalForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="editDate">Date:</label>
+            <input type="date" id="editDate" name="date" required />
+          </div>
+          <div class="btns">
+            <button type="submit" id="submit">Submit</button>
+            <button type="button" class="cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
   <div class="container">
-    <h2>Todo List 📝</h2>
-
-    <h3>Add a Task:</h3>
-    <form id="todoForm">
-      <input type="text" placeholder="Name" id="property" required />
-      <input type="date" id="date" required />
-      <button type="button" class="pushable">+</button>
-    </form>
-    <div id="display"></div>
+    <header class="header">
+      <h2>Todo List 📝</h2>
+    </header>
+    <section class="add-task">
+      <h3>Add a Task:</h3>
+      <form id="todoForm">
+        <div class="form-group">
+          <input type="text" placeholder="Task Name" id="property" required />
+        </div>
+        <div class="form-group">
+          <input type="date" id="date" required />
+        </div>
+        <div class="form-group">
+          <button type="button" class="pushable">+</button>
+        </div>
+      </form>
+    </section>
+    <section id="display" class="task-list"></section>
   </div>
 
   <script src="script.js"></script>
